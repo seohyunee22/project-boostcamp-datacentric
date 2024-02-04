@@ -57,7 +57,7 @@ def main():
     data = pd.read_csv("train.csv")             # 원본 train csv 파일
     dataset_test = pd.read_csv("output.csv")    # train csv evaluate 파일
     find_label_issues(data, dataset_test, csv_file)
-    health_summary()
+    health_summary(data, dataset_test)
   
   
 if __name__ == '__main__':
