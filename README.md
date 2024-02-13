@@ -144,6 +144,9 @@
 ---
 ## Reference
 [1] g2pK: g2p module for Korean, https://github.com/Kyubyong/g2pK
+
 [2] cleanlab documentation, https://docs.cleanlab.ai/stable/index.html
+
 [3] AI Hub 뉴스 기사 기계독해 데이터, https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=577
+
 [4] Akbar Karimi, Leonardo Rossi, Andrea Prati (2021). AEDA: An Easier Data Augmentation Technique for Text Classification. _arXiv preprint arXiv:2108.13230._
