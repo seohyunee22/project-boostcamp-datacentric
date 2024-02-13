@@ -80,6 +80,7 @@
 - 실험 결과, 0.8384 → 0.8323, 8380 로 f1 score 하락
 - mislabel 로 예측된 target 수
 <img width="500" alt="image" src="https://github.com/seohyunee22/level2_data-centric_project/assets/152946581/7a013f0a-5a49-4f18-9035-23be358a4a75">
+
 - target 별 노이즈 이슈
 <img width="500" alt="image" src="https://github.com/seohyunee22/level2_data-centric_project/assets/152946581/39292bc7-e7dd-4f74-95ac-5662c67c0bad">
 
@@ -142,7 +143,7 @@
 
 ---
 ## Reference
-1. https://github.com/Kyubyong/g2pK
-2. https://docs.cleanlab.ai/stable/index.html
-3. https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=577
-4. https://arxiv.org/abs/2108.13230
+1. g2pK: g2p module for Korean, https://github.com/Kyubyong/g2pK
+2. cleanlab documentation, https://docs.cleanlab.ai/stable/index.html
+3. AI Hub 뉴스 기사 기계독해 데이터, https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=577
+4. Akbar Karimi, Leonardo Rossi, Andrea Prati (2021). AEDA: An Easier Data Augmentation Technique for Text Classification. arXiv preprint arXiv:2108.13230.
