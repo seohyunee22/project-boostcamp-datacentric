@@ -130,6 +130,9 @@
     <td align="center" style="text-align:center;" width="250px">
       <b>04</b>
     </td>
+    <td align="center" style="text-align:center;" width="250px">
+      <b>05</b>
+    </td>
   </tr>
   <tr height="50px">
     <td align="center" style="text-align:center;" width="250px">
@@ -150,25 +153,25 @@
   </tr>
   <tr height="100px">
     <td align="left" style="text-align:left;" width="260px">
-      - 학습 데이터 개요 <br>
-      - 평가 데이터 개요<br>
+      - 학습 데이터개요 <br>
+      - 평가 데이터개요<br>
       - input_text 길이 분석<br> 
-      - noise 데이터 분석<br> 
+      - noise 데이터 <br>분석<br> 
     </td>
     <td align="left" style="text-align:left;" width="260px">
-      - 전체 라벨 직접 검수<br>
-      - CleanLab 라이브러리 이용<br>
+      - 전체 라벨 <br> 직접 검수<br>
+      - CleanLab <br> 라이브러리 이용<br>
     </td>
     <td align="left" style="text-align:left;" width="260px">
       - g2p 제거 <br>
       - UNK 토큰 제거<br>
-      - 한자 제거 및 변환</b><br> 
+      - 한자 제거 및 <br> 변환</b><br> 
     </td>
     <td align="left" style="text-align:left;" width="260px">
-      - 형태소 기반 <br>Subword 토크나이징 <br>
+      - 형태소 기반 <br>Subword tokenizing <br>
     </td>
     <td align="left" style="text-align:left;" width="260px">
-      - g2p 노이즈 데이터 생성 <br>
+      - g2p 노이즈<br>  데이터 생성 <br>
       - <a href="https://arxiv.org/abs/2108.13230">AEDA</a> <br>
       - <a href="https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=577">AI hub 뉴스 기사 <br>기계독해 데이터 추가</a> <br>
       - Back Translation <br>
@@ -183,7 +186,7 @@
 <br>
 
 ## 🎓 Reference
-[1]  g2pK: g2p module for Korean, https://github.com/Kyubyong/g2pK<br>
-[2]  cleanlab documentation, https://docs.cleanlab.ai/stable/index.html<br>
-[3]  AI Hub 뉴스 기사 기계독해 데이터, https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=577<br>
+[1]  g2pK: g2p module for Korean, https://github.com/Kyubyong/g2pK<br><br> 
+[2]  cleanlab documentation, https://docs.cleanlab.ai/stable/index.html<br><br> 
+[3]  AI Hub 뉴스 기사 기계독해 데이터, https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=577<br><br> 
 [4]  AEDA: An Easier Data Augmentation Technique for Text Classification. Akbar Karimi, Leonardo Rossi, Andrea Prati (2021).  *[arXiv preprint arXiv:2108.13230](https://arxiv.org/abs/2108.13230)*
