@@ -1,152 +1,192 @@
-# level2_data-centric_project
+![header](https://capsule-render.vercel.app/api?type=waving&height=200&fontSize=50&color=gradient&text=Data-Centric%20KLUE-TC&fontAlignY=26&desc=텍스트%20주제%20분류(Text%20Classification,%20TC)&descAlignY=49&descSize=23&fontColor=ffffff)
 
-# 1. 프로젝트 개요
-주제 분류 프로젝트(KLUE-TC, Text Classification) | 3등
-- Data-Centric 관점으로, 모델 구조의 변경없이 데이터의 변경만으로 텍스트의 주제를 분류하는 task
-<img width="500" alt="image" src="https://github.com/seohyunee22/level2_data-centric_project/assets/152946581/d3555cb4-71ac-4686-a6a9-1fa301ba0d4a">
+<td style="text-align:center; border-color:white" rowspan="3" width=660>
+      <p align="center">
+        <img src="/assets/klue-tc-img.png" width=600>    
+      </p>
+</td>  
 
-#### 담당 업무
-1. 데이터 증강
-- g2p(Grapheme-to-Phoneme), p2g(Phoneme-to-Grapheme) 노이즈 생성
-- Back Translation
-- AEDA
-2. Label 교정(Cleanlab 라이브러리를 이용한 라벨링 이슈 탐지 및 교정)
+### <p align="center"><code>Data-Centric KLUE-TC</code> 는</p> 
+<p align="center">Data-Centric 관점으로,</p>
+<p align="center">모델 구조의 변경없이 데이터의 변경만으로</p>
+<p align="center">텍스트의 주제를 분류하는 NLP Task 입니다.</p>
+
+<table align="center">
+  <tr height="8px">
+    <td align="center" style="text-align:center;" width="80px">
+      <b>Wrap-up Report</b>
+    </td>
+    <td align="center" style="text-align:center;" width="80px">
+      <b>개인 회고</b>
+    </td>
+  </tr>
   
----
+  <tr height="40px">
+    <td align="center" width="150px">
+      <a href="/assets/TC_WrapUp_NLP_07.pdf"><img src="https://img.shields.io/badge/PDF-CC2927?style=flat-square&logo=microsoft&logoColor=white">
+    </td>
+    <td align="center" width="150px">
+      <a href="https://www.notion.so/mayy2yy/Project-KLUE-TC-e6c475ce77364a99a014b70cdaf84c2c"><img src="https://img.shields.io/badge/notion-%23000000.svg?&style=flat-square&logo=notion&logoColor=white "/></a>
+    </td>
+  </tr>
+</table>
+<p align="center">(↑ 로고를 클릭하면 링크로 이동합니다)</p>
+<br>
+<br>
+
+## 📖 Overview
+### 1. 프로젝트 개요
+
+사람은 무의식적으로 각 자연어 문장들이 어떤 주제로 이루어져 있는지 판단 후 내용을 파악하게 됩니다. 그렇다면 사람이 아니라 **딥러닝 모델**은 어떨까요? 
+
+자연어를 독해 및 분석 과정을 거쳐 주어진 task를 수행하기 위해서는 자연어의 주제에 대한 이해가 필수적입니다. <br>
+`주제분류(Topic Classification)` task 중 `KLUE-TC` benchmark는 뉴스의 헤드라인을 통해 그 뉴스가 어떤 topic을 갖는지를 분류해내는 task입니다.<br>
+
+- train
+    
+    기사 제목에 해당하는 `생활문화(Society)`, `스포츠(Sports)`, `세계(World)`, `정치(Politics)`, `경제(Economy)`, <br>`IT과학(IT/Science)`, `사회(Society)` 7개의 주제 중 하나의 라벨
+    
+- inference
+    - **input :** 약 9100개의 뉴스 헤드라인과 url, 작성 날짜
+    - **output** : 각 뉴스 헤드라인의 주제 (생활문화, 스포츠, 세계, 정치, 경제, IT과학, 사회 중 하나)
+    - **평가기준** : 모든 label에 대해 중요도를 동일하게 부여하는 ***macro*** F1 Score
+
+<br>
+
+### 2. 목표
+- Data-Centric 의 취지에 맞게, 베이스라인 모델의 수정 없이 오로지 **데이터의 수정으로만**의 모델의 성능 향상을 목표로 합니다.
+- 주어진 text(뉴스 헤드라인)의 주제를 분류할 떄, 7개의 중 가장 정확한 target(label) 하나를 예측하는 것을 목적으로 합니다.
+
+<br>
+
+### 3. 평가 방법
+평가 방법은 다음과 같습니다.
+- 모든 label에 대해 중요도를 동일하게 부여하는 <code>_**macro**_ F1</code> score
+<br>
+<br>
 
 
-# 2. 리더보드 순위
-- **public** `2위`→ **private**(최종) `3위`🏅
-- Private macro f1 score : 0.8441
 
-<img width="700" alt="image" src="https://github.com/seohyunee22/level2_data-centric_project/assets/152946581/51515579-23c2-436d-ab33-9d45f4b3c298">
-<img width="700" alt="image" src="https://github.com/seohyunee22/level2_data-centric_project/assets/152946581/4056fe76-ad73-4ce9-8d9d-597a3f93be4c">
+## 🏅 리더보드 순위
+- **public** `2위` → **private**(최종) `3위`🏅
+<p align="center">
+  <img width="900px" alt="image" src="/assets/tc-rank-img.png">
+</p>
+  <!--<img width="500" alt="image" src="https://github.com/seohyunee22/level2_klue-re_project/assets/152946581/1d226266-5c75-42fb-8e0d-ed9c4fca5632">   -->
+
+<br>
+<br>
+
+
+## 💼 담당 업무
+<table align="center">
+  <tr height="200px">
+    <td align="center" width="250px">
+      <a href="https://github.com/seohyunee22"><img src="https://avatars.githubusercontent.com/seohyunee22"/></a>
+    </td>
+    <td align="left" style="text-align:left;" width="400px">
+    <a href="https://github.com/seohyunee22">[ 양서현_T6099 ]</a>
+    <br><br>
+      1.  데이터 증강 <br>
+      - <a href="https://github.com/Kyubyong/g2pK">g2p(to-Phoneme)</a> 노이즈 생성 <br>
+      -  p2g(to-Grapheme) 노이즈 생성<br>
+      - <a href="https://arxiv.org/abs/2108.13230">AEDA</a> <br>
+      -  Back Translation<br><br>
+      2. Label 교정<br>(<a href="https://docs.cleanlab.ai/stable/index.html">Cleanlab 라이브러리</a>를 이용한 <br>라벨링 이슈 탐지 및 교정)<br>      
+    </td>
+  </tr>
+  <tr height="10px">
+    <td align="center" width="250px">
+    <a href="https://github.com/seohyunee22">[ 양서현_T6099 ]</a>
+    </td>
+    <td align="letf" width="250px">
+     * g2p(Grapheme-to-Phoneme) : 글자를 발음나는 대로 적는 방법<br>
+     * p2g(Phoneme-to-Grapheme) : g2p의 반대 <br>
+    </td>
+  <tr>
+</table>
   
----
+<br>
+<br>
+
+## 🛠️ Tech Stack
+<img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"> 
+<img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"> 
+<img src="https://img.shields.io/badge/scikitlearn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white">
+<br><img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/notion-%23000000.svg?&style=flat-square&logo=notion&logoColor=white "/>
+<br>
+<br>
+
+## 💡 프로젝트 수행
+
+<table align="center">
+ <tr height="40px">
+    <td align="center" style="text-align:center;" width="250px">
+      <b>01</b>
+    </td>
+    <td align="center" style="text-align:center;" width="250px">
+      <b>02</b>
+    </td>
+    <td align="center" style="text-align:center;" width="250px">
+      <b>03</b>
+    </td>
+    <td align="center" style="text-align:center;" width="250px">
+      <b>04</b>
+    </td>
+  </tr>
+  <tr height="50px">
+    <td align="center" style="text-align:center;" width="250px">
+      <b>EDA</b>
+    </td>
+    <td align="center" style="text-align:center;" width="250px">
+      <b>Data Re-Labeling</b>
+    </td>
+    <td align="center" style="text-align:center;" width="250px">
+      <b>Data Cleaning</b>
+    </td>
+    <td align="center" style="text-align:center;" width="250px">
+      <b>Data Pre-processing</b>
+    </td>
+    <td align="center" style="text-align:center;" width="250px">
+      <b>Data Augmentation</b>
+    </td>
+  </tr>
+  <tr height="100px">
+    <td align="left" style="text-align:left;" width="260px">
+      - 학습 데이터 개요 <br>
+      - 평가 데이터 개요<br>
+      - input_text 길이 분석<br> 
+      - noise 데이터 분석<br> 
+    </td>
+    <td align="left" style="text-align:left;" width="260px">
+      - 전체 라벨 직접 검수<br>
+      - CleanLab 라이브러리 이용<br>
+    </td>
+    <td align="left" style="text-align:left;" width="260px">
+      - g2p 제거 <br>
+      - UNK 토큰 제거<br>
+      - 한자 제거 및 변환</b><br> 
+    </td>
+    <td align="left" style="text-align:left;" width="260px">
+      - 형태소 기반 <br>Subword 토크나이징 <br>
+    </td>
+    <td align="left" style="text-align:left;" width="260px">
+      - g2p 노이즈 데이터 생성 <br>
+      - <a href="https://arxiv.org/abs/2108.13230">AEDA</a> <br>
+      - <a href="https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=577">AI hub 뉴스 기사 <br>기계독해 데이터 추가</a> <br>
+      - Back Translation <br>
+    </td>
+  </tr>
+</table>
+<br>
+🔎 프로젝트 수행과정에 대한 자세한 내용은 <a href="https://www.notion.so/mayy2yy/Project-KLUE-TC-e6c475ce77364a99a014b70cdaf84c2c?pvs=4#ccf9c77e50594387b226d3b15bccd92c"><img src="https://img.shields.io/badge/notion-%23000000.svg?&style=for-the-badge&logo=notion&logoColor=white "/></a>(개인 회고, 클릭시 이동) 에서 확인하실 수 있습니다.
 
 
-## 3. 프로젝트 역할 및 구성
+<br>
+<br>
 
-## 협업 툴
-
-- Notion
-    - 공지 및 project kanban board 운용
-- Github
-    - Git, PR, Action을 통한 자동화
-- W&B
-    - 실시간 실험 내용 및 결과 공유
-
-## Skills
-
-- Pytorch
-- HuggingFace
-- Pandas, Numpy
-- Scikit-Learn
-
-  
----
-
-
-# 3. Directory
-```
-📦 level2_klue-nlp-07
-├─ utils
-│  ├─ aeda.ipynb
-│  ├─ back_trans_google.ipynb
-│  ├─ cleanlab.ipynb
-│  ├─ confusion_matrix.ipynb
-│  └─ g2p.ipynb
-├─ README.md
-├─ baseline_code.ipynb
-```
-  
----
-
-
-
-# 3. 프로젝트 수행 절차 및 방법
-## 1. 데이터 재 라벨링
-1)  전체 라벨 직접 검수
-- 1000개씩 7개의 label이 붙은 train data
-- 각 label 별로 정렬하여 수작업으로 라벨에 문제가 있는 데이터 탐지
-- 라벨에 문제가 있는 데이터의 경우 두 가지 방법으로 재 라벨링
--> Open Ko-LLM 중 SOTA모델(LDCC SOLAR 10.7B) 사용하여 예측 :0.8360
--> 사람이 직접 재 라벨링 :0.8441
--> 사람이 직접 라벨링한 결과가 더 성능이 좋았음
-  
-2) Cleanlab 라이브러리 이용
-- train 데이터셋으로 학습 후 train 데이터셋으로 evaluate한 결과와 비교하여 cleanlab 내 package를 이용하여 라벨링 이슈를 탐지
-- mislabel 의심 데이터 삭제, evaluate 데이터로 재학습, Pseudo-labeling 적용
-- 실험 결과, 0.8384 → 0.8323, 8380 로 f1 score 하락
-- mislabel 로 예측된 target 수
-<img width="500" alt="image" src="https://github.com/seohyunee22/level2_data-centric_project/assets/152946581/7a013f0a-5a49-4f18-9035-23be358a4a75">
-
-- target 별 노이즈 이슈
-<img width="500" alt="image" src="https://github.com/seohyunee22/level2_data-centric_project/assets/152946581/39292bc7-e7dd-4f74-95ac-5662c67c0bad">
-
-
----
-
-
-## 2. 데이터 클리닝
-1) g2p 제거
-- g2p (Grapheme-to-Phoneme, 글자를 발음나는 대로 적는 방법) 형태로 train data에 첨가된 노이즈를 반대의 p2g (Phoneme-to-Grapheme) 모델을 통해 원상복구
-- 원상복구된 학습 데이터로 실험 결과, 0.8384 → 0.8016로 f1 score 하락
-- Test data에 여전히 존재하는 g2p 노이즈에 모델이 효과적으로 대응하지 못한 것으로 추측
-
-2)  UNK 토큰 단어 제거
-- 토크나이징했을 때 unknown 토큰되는 단어 제거
-- 실험 결과, 0.8384 -> 0.8376 로 f1 score 하락
-- https://github.com/Kyubyong/g2pK 참조
-
-3) 한자 변환
-- 한자를 한글로 치환, “北 -> 북”, 0.8384 -> 0.8344
-- 한자와 한글을 혼합, “北 -> 北(북)”, 0.8384 -> 0.8363
-- Test data에 있는 한자 데이터는 모델이 학습한 형식과 다르므로 모델이 효과적으로 처리할 수 없다고 추측
-
----
-
-
-
-## 3. 데이터 전처리
-1) 형태소 기반 Subword 토크나이징 
-- 강의 내용 중 Morpheme-based Subword Tokenization 기법 기반
-- 형태소 분석기(Mecab-ko)를 통해 토크나이저에 들어가기 전에 한 번 더 형태소 단위의 사전 토크나이징을 진행 후, 본 토크나이저에서 BPE(Byte Pair Encoding) 적용
-- 실험 결과, 0.8384 → 0.8280로 f1 score 하락
-- Test data는 동일 방식으로 전처리를 할 수 없어서 점수가 소폭 하락한 것으로 추측
-
----
-
-
-
-## 4. 데이터 증강
-1) g2p로 노이즈 데이터 생성
-- p2g 모델을 통해 g2p된 데이터를 원상 복구 한 후에 모든 데이터를 다시 g2p 모델을 통해 노이즈 데이터 생성
-- 기존 일부데이터로만 생성되었던 노이즈 데이터를 전체 데이터로 생성 하면서 노이즈 데이터의 양 증가
-
-2) AI hub 뉴스 기사 기계독해 데이터
-- AI hub에 있는 외부 데이터셋을 통해 데이터 증강
-- train 데이터의 라벨과 규칙이 다를 것이라고 예상하여 train 데이터셋으로 만든 모델로 다시 라벨링
-- 실험 결과, 0.8437 → 0.8414로 f1 score 하락
-- 기존 모델을 통해 다시 라벨링 한것이므로 애매한것을 더욱 못 맞추게 되어 오히려 성능 하락한 것으로 보임
-
-3) Back Translation
-- 기존 train 데이터 셋을 back translation(영어, 영어-스페인어, 일본어)하여 데이터 증강
-- 실험 결과, 0.8454 → 0.8425로 f1 score 하락
-- 번역이 정확하지 않아 전체적인 데이터의 질이 떨어져 오히려 성능이 저하   
-
-4) AEDA
-- ≪[AEDA: An Easier Data Augmentation Technique for Text Classification](https://arxiv.org/abs/2108.13230)≫ 논문
-- 기존 train 데이터셋에 특수문자(. , ? : ! ,)를 문장 중간에 삽입하여 데이터 증강
-- train 데이터를 p2g 데이터로 클리닝할 때,  ‘...(3개 문자)’와 ‘…(1개 문자)’가 의미는 같지만 다른 단어로 간주하여 제거하지 않았을 때의 f1 score가 높았던 것에 착안
-- 실험 결과, public score 기준 0.8455 → 0.8461로 f1 score 상승
-
----
-## Reference
-[1] g2pK: g2p module for Korean, https://github.com/Kyubyong/g2pK
-
-[2] cleanlab documentation, https://docs.cleanlab.ai/stable/index.html
-
-[3] AI Hub 뉴스 기사 기계독해 데이터, https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=577
-
-[4] Akbar Karimi, Leonardo Rossi, Andrea Prati (2021). AEDA: An Easier Data Augmentation Technique for Text Classification. _arXiv preprint arXiv:2108.13230._
+## 🎓 Reference
+[1]  g2pK: g2p module for Korean, https://github.com/Kyubyong/g2pK<br>
+[2]  cleanlab documentation, https://docs.cleanlab.ai/stable/index.html<br>
+[3]  AI Hub 뉴스 기사 기계독해 데이터, https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=577<br>
+[4]  AEDA: An Easier Data Augmentation Technique for Text Classification. Akbar Karimi, Leonardo Rossi, Andrea Prati (2021).  *[arXiv preprint arXiv:2108.13230](https://arxiv.org/abs/2108.13230)*
