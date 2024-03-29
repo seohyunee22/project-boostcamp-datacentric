@@ -41,11 +41,11 @@
 그렇다면 사람이 아니라 **딥러닝 모델**은 어떨까요? 
 
 자연어를 독해 및 분석 과정을 거쳐 주어진 task를 수행하기 위해서는 자연어의 주제에 대한 이해가 필수적입니다. <br>
-`주제분류(Topic Classification)` task 중 `KLUE-TC` benchmark는 뉴스의 헤드라인을 통해 그 뉴스의 topic을 분류해내는 task입니다.<br>
+`주제분류(Topic Classification)` task 중 `KLUE-TC` benchmark는 뉴스의 헤드라인을 통해 그 뉴스의 topic을 분류해<br>내는 task입니다.
 
 - train
     
-    기사 제목에 해당하는 `생활문화(Society)`, `스포츠(Sports)`, `세계(World)`, `정치(Politics)`, `경제(Economy)`, `IT과학(IT/Science)`, <br>`사회(Society)` 7개의 주제 중 하나의 라벨
+    기사 제목에 해당하는 `생활문화(Society)`, `스포츠(Sports)`, `세계(World)`, `정치(Politics)`, `경제(Economy)`, <br> `IT과학(IT/Science)`, `사회(Society)` 7개의 주제 중 하나의 라벨
     
 - inference
     - <code>**input**</code> : 약 9100개의 뉴스 헤드라인과 url, 작성 날짜
@@ -55,8 +55,8 @@
 <br>
 
 ### 2. 목표
-- Data-Centric 의 취지에 맞게, 베이스라인 모델의 수정 없이 오로지 **데이터의 수정으로만**의 모델의 성능 향상을 목표로 합니다.
-- 주어진 text(뉴스 헤드라인)의 주제를 분류할 때, **7개의 중 가장 정확한 target(label) 하나를 예측**하는 것을 목적으로 합니다.
+- Data-Centric 의 취지에 맞게, 베이스라인 모델의 수정 없이 오로지 **데이터의 수정으로만**의 모델의 성능 향상을 <br>목표로 합니다.
+- 주어진 text(헤드라인)의 주제 분류 시, **7개의 target(label)중 가장 정확한 하나를 예측**하는 것을 목적으로 합니다.
 
 <br>
 
