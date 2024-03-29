@@ -37,25 +37,26 @@
 ## 📖 Overview
 ### 1. 프로젝트 개요
 
-사람은 무의식적으로 각 자연어 문장들이 어떤 주제로 이루어져 있는지 판단 후 내용을 파악하게 됩니다. 그렇다면 사람이 아니라 **딥러닝 모델**은 어떨까요? 
+사람은 무의식적으로 각 자연어 문장들이 어떤 주제로 이루어져 있는지 판단 후 내용을 파악하게 됩니다. <br>
+그렇다면 사람이 아니라 **딥러닝 모델**은 어떨까요? 
 
 자연어를 독해 및 분석 과정을 거쳐 주어진 task를 수행하기 위해서는 자연어의 주제에 대한 이해가 필수적입니다. <br>
-`주제분류(Topic Classification)` task 중 `KLUE-TC` benchmark는 뉴스의 헤드라인을 통해 그 뉴스가 어떤 topic을 갖는지를 분류해내는 task입니다.<br>
+`주제분류(Topic Classification)` task 중 `KLUE-TC` benchmark는 뉴스의 헤드라인을 통해 그 뉴스의 topic을 분류해내는 task입니다.<br>
 
 - train
     
-    기사 제목에 해당하는 `생활문화(Society)`, `스포츠(Sports)`, `세계(World)`, `정치(Politics)`, `경제(Economy)`, <br>`IT과학(IT/Science)`, `사회(Society)` 7개의 주제 중 하나의 라벨
+    기사 제목에 해당하는 `생활문화(Society)`, `스포츠(Sports)`, `세계(World)`, `정치(Politics)`, `경제(Economy)`, `IT과학(IT/Science)`, <br>`사회(Society)` 7개의 주제 중 하나의 라벨
     
 - inference
-    - **input :** 약 9100개의 뉴스 헤드라인과 url, 작성 날짜
-    - **output** : 각 뉴스 헤드라인의 주제 (생활문화, 스포츠, 세계, 정치, 경제, IT과학, 사회 중 하나)
-    - **평가기준** : 모든 label에 대해 중요도를 동일하게 부여하는 ***macro*** F1 Score
+    - <code>**input**</code> : 약 9100개의 뉴스 헤드라인과 url, 작성 날짜
+    - <code>**output**</code> : 각 뉴스 헤드라인의 주제 (생활문화, 스포츠, 세계, 정치, 경제, IT과학, 사회 중 하나)
+    - <code>**평가기준**</code> : 모든 label에 대해 중요도를 동일하게 부여하는 ***macro*** F1 Score
 
 <br>
 
 ### 2. 목표
 - Data-Centric 의 취지에 맞게, 베이스라인 모델의 수정 없이 오로지 **데이터의 수정으로만**의 모델의 성능 향상을 목표로 합니다.
-- 주어진 text(뉴스 헤드라인)의 주제를 분류할 떄, 7개의 중 가장 정확한 target(label) 하나를 예측하는 것을 목적으로 합니다.
+- 주어진 text(뉴스 헤드라인)의 주제를 분류할 때, **7개의 중 가장 정확한 target(label) 하나를 예측**하는 것을 목적으로 합니다.
 
 <br>
 
@@ -84,9 +85,7 @@
     <td align="center" width="250px">
       <a href="https://github.com/seohyunee22"><img src="https://avatars.githubusercontent.com/seohyunee22"/></a>
     </td>
-    <td align="left" style="text-align:left;" width="400px">
-    <a href="https://github.com/seohyunee22">[ 양서현_T6099 ]</a>
-    <br><br>
+    <td align="left" style="text-align:left;" width="500px">
       1.  데이터 증강 <br>
       - <a href="https://github.com/Kyubyong/g2pK">g2p(to-Phoneme)</a> 노이즈 생성 <br>
       -  p2g(to-Grapheme) 노이즈 생성<br>
@@ -95,11 +94,11 @@
       2. Label 교정<br>(<a href="https://docs.cleanlab.ai/stable/index.html">Cleanlab 라이브러리</a>를 이용한 <br>라벨링 이슈 탐지 및 교정)<br>      
     </td>
   </tr>
-  <tr height="10px">
+  <tr height="100px">
     <td align="center" width="250px">
     <a href="https://github.com/seohyunee22">[ 양서현_T6099 ]</a>
     </td>
-    <td align="letf" width="250px">
+    <td align="letf" width="500px">
      * g2p(Grapheme-to-Phoneme) : 글자를 발음나는 대로 적는 방법<br>
      * p2g(Phoneme-to-Grapheme) : g2p의 반대 <br>
     </td>
@@ -110,9 +109,7 @@
 <br>
 
 ## 🛠️ Tech Stack
-<img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"> 
-<img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"> 
-<img src="https://img.shields.io/badge/scikitlearn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white">
+<img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat-square&logo=Pytorch&logoColor=white"> <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"> <img src="https://img.shields.io/badge/scikitlearn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white">
 <br><img src="https://img.shields.io/badge/github-181717?style=flat-square&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/notion-%23000000.svg?&style=flat-square&logo=notion&logoColor=white "/>
 <br>
 <br>
